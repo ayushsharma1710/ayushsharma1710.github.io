@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeHeroImages();
     initializeLogoImage();
     initializeContactScroll();
+    initializeStrengthsAnimation();
     forceImagesVisible();
 });
 
@@ -40,6 +41,39 @@ function forceImagesVisible() {
             img.classList.add('loaded');
         }
     });
+}
+
+// ============================================
+// STRENGTHS ANIMATION
+// ============================================
+function initializeStrengthsAnimation() {
+    const strengthItems = document.querySelectorAll('.strengths-list li');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const items = entry.target.querySelectorAll('li');
+                items.forEach((item, index) => {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateX(-20px)';
+                    item.style.transition = 'all 0.4s ease';
+                    
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateX(0)';
+                    }, index * 100);
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.3
+    });
+    
+    const strengthsList = document.querySelector('.strengths-list');
+    if (strengthsList) {
+        observer.observe(strengthsList);
+    }
 }
 
 // ============================================
@@ -362,6 +396,6 @@ window.addEventListener('load', () => {
     console.log('✅ Website fully loaded and initialized');
 });
 
-// Force images visible after a short delay (catch any missed images)
+// Force images visible after a short delay
 setTimeout(forceImagesVisible, 500);
 setTimeout(forceImagesVisible, 1000);
