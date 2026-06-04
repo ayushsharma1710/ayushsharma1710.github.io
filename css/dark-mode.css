@@ -1,0 +1,68 @@
+/* ============================================
+   DARK MODE OVERRIDES (in dark-mode.css)
+   ============================================ */
+[data-theme="dark"] .top-bar {
+    background: var(--white);
+    border-bottom-color: var(--medium-grey);
+}
+
+[data-theme="dark"] .site-header {
+    background: var(--white);
+}
+
+[data-theme="dark"] .nav-menu {
+    background: var(--primary-blue);
+}
+
+[data-theme="dark"] .dropdown {
+    background: var(--white);
+}
+
+[data-theme="dark"] .dropdown a {
+    color: var(--text-dark);
+    border-bottom-color: var(--light-grey);
+}
+
+[data-theme="dark"] .dropdown a:hover {
+    background: rgba(29,168,232,0.1);
+}
+
+[data-theme="dark"] .social-icons a {
+    background: var(--light-grey);
+}
+
+[data-theme="dark"] .featured-news {
+    background: var(--light-grey);
+}
+
+[data-theme="dark"] .key-issues {
+    background: var(--white);
+}
+
+[data-theme="dark"] .inspiration {
+    background: var(--white);
+}
+
+[data-theme="dark"] .site-footer {
+    background: var(--white);
+    border-top-color: var(--medium-grey);
+}
+
+[data-theme="dark"] .copyright-bar {
+    background: #0a0a0a;
+}
+
+[data-theme="dark"] .nav-arrow {
+    background: var(--white);
+    border-color: var(--medium-grey);
+}
+
+[data-theme="dark"] .achievement-card .achievement-link {
+    background: var(--light-grey);
+}
+
+[data-theme="dark"] .news-card .news-image img,
+[data-theme="dark"] .issue-card .issue-image img,
+[data-theme="dark"] .profile-card .profile-image img {
+    filter: brightness(0.9);
+}
