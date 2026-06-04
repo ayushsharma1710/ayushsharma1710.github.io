@@ -51,6 +51,10 @@ body,
     background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(13,71,161,0.3));
 }
 
+[data-theme="dark"] .hero-strengths {
+    background: rgba(0, 0, 0, 0.75);
+}
+
 /* Cards Dark Mode */
 [data-theme="dark"] .achievement-card {
     background: var(--white);
@@ -74,6 +78,11 @@ body,
 /* Achievement Icons */
 [data-theme="dark"] .achievement-icon {
     background: rgba(29,168,232,0.2);
+    color: #4fc3f7;
+}
+
+/* Strengths Dark Mode */
+[data-theme="dark"] .strengths-list li i {
     color: #4fc3f7;
 }
 
