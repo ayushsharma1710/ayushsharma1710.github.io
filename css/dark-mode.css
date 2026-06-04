@@ -2,40 +2,17 @@
    DARK MODE ENHANCEMENTS
    ============================================ */
 
-[data-theme="dark"] {
-    /* Override CSS custom properties */
-    --white: #1a1a2e;
-    --light-grey: #16213e;
-    --medium-grey: #0f3460;
-    --text-dark: #e0e0e0;
-    --text-medium: #cccccc;
-    --text-light: #999999;
-    --primary-blue-light: #1a2a40;
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.3);
-    --shadow-md: 0 4px 16px rgba(0,0,0,0.4);
-    --shadow-lg: 0 8px 32px rgba(0,0,0,0.5);
-    --shadow-xl: 0 12px 48px rgba(0,0,0,0.6);
-}
-
 /* Smooth transition for theme switching */
 body, 
 .site-header,
 .top-bar,
 .main-nav,
 .hero-section,
-.featured-news,
-.key-issues,
 .achievements,
-.inspiration,
 .site-footer,
 .copyright-bar,
-.news-card,
-.issue-card,
 .achievement-card,
-.profile-card,
-.nav-arrow,
-.btn-view-all,
-.dropdown {
+.btn-view-all {
     transition: background-color 0.3s ease, 
                 color 0.3s ease, 
                 border-color 0.3s ease,
@@ -65,22 +42,6 @@ body,
     background: rgba(255,255,255,0.15);
 }
 
-/* Dropdown Dark Mode */
-[data-theme="dark"] .dropdown {
-    background: var(--white);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.6);
-}
-
-[data-theme="dark"] .dropdown a {
-    color: var(--text-dark);
-    border-bottom-color: var(--light-grey);
-}
-
-[data-theme="dark"] .dropdown a:hover {
-    background: rgba(29,168,232,0.15);
-    color: #4fc3f7;
-}
-
 /* Hero Dark Mode */
 [data-theme="dark"] .hero-left {
     background: linear-gradient(135deg, rgba(0,0,0,0.9), rgba(13,71,161,0.8));
@@ -90,38 +51,7 @@ body,
     background: linear-gradient(to right, rgba(0,0,0,0.5), rgba(13,71,161,0.3));
 }
 
-/* Section Backgrounds */
-[data-theme="dark"] .featured-news {
-    background: var(--light-grey);
-}
-
-[data-theme="dark"] .key-issues {
-    background: var(--white);
-}
-
-[data-theme="dark"] .inspiration {
-    background: var(--white);
-}
-
 /* Cards Dark Mode */
-[data-theme="dark"] .news-card {
-    background: var(--white);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-
-[data-theme="dark"] .news-card:hover {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-}
-
-[data-theme="dark"] .issue-card {
-    background: var(--white);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-
-[data-theme="dark"] .issue-card:hover {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-}
-
 [data-theme="dark"] .achievement-card {
     background: var(--white);
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
@@ -131,76 +61,20 @@ body,
     box-shadow: 0 12px 40px rgba(0,0,0,0.6);
 }
 
-[data-theme="dark"] .profile-card {
-    background: var(--white);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-
-[data-theme="dark"] .profile-card:hover {
-    box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-}
-
 /* Text Colors */
-[data-theme="dark"] .news-title,
-[data-theme="dark"] .issue-title,
 [data-theme="dark"] .achievement-title,
-[data-theme="dark"] .profile-name,
 [data-theme="dark"] .section-title {
     color: #ffffff;
 }
 
-[data-theme="dark"] .news-excerpt,
-[data-theme="dark"] .issue-description,
-[data-theme="dark"] .achievement-description,
-[data-theme="dark"] .profile-description {
+[data-theme="dark"] .achievement-description {
     color: #b0b0b0;
-}
-
-[data-theme="dark"] .section-subtitle {
-    color: #999999;
 }
 
 /* Achievement Icons */
 [data-theme="dark"] .achievement-icon {
     background: rgba(29,168,232,0.2);
     color: #4fc3f7;
-}
-
-[data-theme="dark"] .achievement-link {
-    background: var(--light-grey);
-    color: #b0b0b0;
-}
-
-/* Issue & Profile Links */
-[data-theme="dark"] .issue-link,
-[data-theme="dark"] .profile-link {
-    background: rgba(29,168,232,0.2);
-    color: #4fc3f7;
-}
-
-/* Navigation Arrows */
-[data-theme="dark"] .nav-arrow {
-    background: var(--white);
-    border-color: var(--medium-grey);
-    color: #cccccc;
-}
-
-[data-theme="dark"] .nav-arrow:hover {
-    background: #0d47a1;
-    color: #ffffff;
-    border-color: #0d47a1;
-}
-
-/* View All Button */
-[data-theme="dark"] .btn-view-all {
-    background: var(--white);
-    color: #4fc3f7;
-    border-color: #4fc3f7;
-}
-
-[data-theme="dark"] .btn-view-all:hover {
-    background: #4fc3f7;
-    color: var(--white);
 }
 
 /* Footer */
@@ -225,28 +99,14 @@ body,
     color: #4fc3f7;
 }
 
+[data-theme="dark"] .footer-links-static li {
+    color: #cccccc;
+}
+
 /* Copyright Bar */
 [data-theme="dark"] .copyright-bar {
     background: #0a0a15;
     border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-/* Carousel Dots */
-[data-theme="dark"] .carousel-dot {
-    background: rgba(255,255,255,0.3);
-}
-
-[data-theme="dark"] .carousel-dot.active {
-    background: #4fc3f7;
-}
-
-/* Floating Panel */
-[data-theme="dark"] .panel-item {
-    background: #0d47a1;
-}
-
-[data-theme="dark"] .panel-item:hover {
-    background: #1565c0;
 }
 
 /* Social Icons */
@@ -256,17 +116,6 @@ body,
 }
 
 [data-theme="dark"] .social-icons a:hover {
-    background: #4fc3f7;
-    color: #1a1a2e;
-}
-
-/* Dark Mode Toggle */
-[data-theme="dark"] .dark-mode-toggle {
-    background: var(--light-grey);
-    color: #cccccc;
-}
-
-[data-theme="dark"] .dark-mode-toggle:hover {
     background: #4fc3f7;
     color: #1a1a2e;
 }
@@ -285,34 +134,11 @@ body,
     color: #ffffff;
 }
 
-/* Divider Lines */
-[data-theme="dark"] .issue-divider {
-    background: #4fc3f7;
+[data-theme="dark"] .logo-circle {
+    border-color: #4fc3f7;
+    box-shadow: 0 2px 8px rgba(79,195,247,0.2);
 }
 
-/* Image adjustments for dark mode */
-[data-theme="dark"] .news-image::after,
-[data-theme="dark"] .issue-image::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.1);
-    pointer-events: none;
-}
-
-/* Date badge */
-[data-theme="dark"] .news-date {
-    background: #0d47a1;
-}
-
-/* Smooth theme icon transition */
-.dark-mode-toggle i {
-    transition: transform 0.3s ease;
-}
-
-.dark-mode-toggle:hover i {
-    transform: rotate(360deg);
+[data-theme="dark"] .logo-link:hover .logo-circle {
+    box-shadow: 0 4px 16px rgba(79,195,247,0.4);
 }
