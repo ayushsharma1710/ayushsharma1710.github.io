@@ -340,23 +340,19 @@ ul {
 }
 
 /* ============================================
-   HERO SECTION (STATIC - NO CAROUSEL)
+   HERO SECTION (STATIC - WITH STRENGTHS)
    ============================================ */
 .hero-section {
     position: relative;
-    height: 600px;
+    min-height: 600px;
     overflow: hidden;
     background: var(--text-dark);
 }
 
 .hero-slide {
     width: 100%;
-    height: 100%;
+    min-height: 600px;
     display: flex;
-}
-
-.hero-slide.active {
-    opacity: 1;
 }
 
 .hero-left {
@@ -467,15 +463,20 @@ ul {
 .hero-right {
     flex: 1;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
-    position: relative;
     opacity: 1 !important;
+    z-index: 0;
 }
 
 .hero-overlay {
@@ -485,6 +486,79 @@ ul {
     width: 100%;
     height: 100%;
     background: linear-gradient(to right, rgba(0,0,0,0.3), rgba(29,168,232,0.2));
+    z-index: 1;
+}
+
+/* ============================================
+   HERO STRENGTHS SECTION
+   ============================================ */
+.hero-strengths {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(5px);
+}
+
+.strengths-heading {
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.strengths-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-blue);
+    border-radius: 2px;
+}
+
+.strengths-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.strengths-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all var(--transition-fast);
+    padding: 4px 0;
+}
+
+.strengths-list li:hover {
+    color: var(--white);
+    transform: translateX(5px);
+}
+
+.strengths-list li i {
+    color: var(--primary-blue);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: all var(--transition-fast);
+}
+
+.strengths-list li:hover i {
+    color: #4fc3f7;
+    transform: scale(1.2);
 }
 
 /* ============================================
@@ -783,17 +857,17 @@ ul {
     
     /* Hero */
     .hero-section {
-        height: auto;
         min-height: auto;
     }
     
     .hero-slide {
         flex-direction: column;
+        min-height: auto;
     }
     
     .hero-left {
         padding: 50px 30px;
-        order: 2;
+        order: 1;
     }
     
     .hero-content-wrapper {
@@ -809,8 +883,20 @@ ul {
     }
     
     .hero-right {
-        height: 300px;
-        order: 1;
+        order: 2;
+        min-height: 400px;
+    }
+    
+    .hero-image {
+        height: 100%;
+    }
+    
+    .hero-strengths {
+        padding: 30px;
+    }
+    
+    .strengths-heading {
+        font-size: 1.5rem;
     }
     
     .hero-headline {
@@ -896,20 +982,20 @@ ul {
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     
-    /* Hero - Mobile Fix */
+    /* Hero - Mobile */
     .hero-section {
-        height: auto;
         min-height: auto;
         display: block;
     }
     
     .hero-slide {
         flex-direction: column;
+        min-height: auto;
     }
     
     .hero-left {
         padding: 40px 20px;
-        order: 2;
+        order: 1;
     }
     
     .hero-content-wrapper {
@@ -936,13 +1022,31 @@ ul {
     }
     
     .hero-right {
-        height: 250px;
-        order: 1;
-        display: block;
+        order: 2;
+        min-height: auto;
     }
     
     .hero-image {
+        position: relative;
         height: 250px;
+    }
+    
+    .hero-strengths {
+        padding: 30px 20px;
+    }
+    
+    .strengths-heading {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    .strengths-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .strengths-list li {
+        font-size: 0.95rem;
     }
     
     .hero-headline {
@@ -1011,12 +1115,21 @@ ul {
         border-radius: 12px;
     }
     
-    .hero-right {
+    .hero-image {
         height: 200px;
     }
     
-    .hero-image {
-        height: 200px;
+    .hero-strengths {
+        padding: 24px 16px;
+    }
+    
+    .strengths-heading {
+        font-size: 1.3rem;
+    }
+    
+    .strengths-list li {
+        font-size: 0.9rem;
+        gap: 10px;
     }
     
     .hero-headline {
