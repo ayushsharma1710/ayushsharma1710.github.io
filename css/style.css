@@ -149,7 +149,7 @@ ul {
 }
 
 /* ============================================
-   LOGO STYLES - WITH WHITE BACKGROUND MASKING
+   LOGO STYLES
    ============================================ */
 .top-bar-left {
     display: flex;
@@ -182,8 +182,6 @@ ul {
     flex-shrink: 0;
     box-shadow: 0 2px 8px rgba(29,168,232,0.2);
     transition: all var(--transition-smooth);
-    /* This blends the white background of the logo with the circle background */
-    mix-blend-mode: normal;
 }
 
 .logo-link:hover .logo-circle {
@@ -197,7 +195,6 @@ ul {
     object-fit: cover;
     object-position: center;
     opacity: 1 !important;
-    /* This helps blend the image edges */
     border-radius: 50%;
 }
 
@@ -344,23 +341,17 @@ ul {
 }
 
 /* ============================================
-   HERO SECTION (STATIC - NO CAROUSEL)
+   HERO SECTION
    ============================================ */
 .hero-section {
     position: relative;
-    min-height: 600px;
     overflow: hidden;
     background: var(--text-dark);
 }
 
 .hero-slide {
     width: 100%;
-    min-height: 600px;
     display: flex;
-}
-
-.hero-slide.active {
-    opacity: 1;
 }
 
 .hero-left {
@@ -368,7 +359,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 60px 40px;
     background: linear-gradient(135deg, rgba(0,0,0,0.85), rgba(29,168,232,0.7));
     position: relative;
     z-index: 2;
@@ -379,20 +370,17 @@ ul {
     max-width: 1200px;
 }
 
-/* Wrapper for text + image layout */
 .hero-content-wrapper {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-/* Text content */
 .hero-text {
     flex: 1;
     min-width: 0;
 }
 
-/* Slogan image container */
 .hero-slogan-image {
     flex: 0 0 300px;
     display: flex;
@@ -469,19 +457,19 @@ ul {
 }
 
 /* ============================================
-   HERO RIGHT - KEY STRENGTHS SECTION
+   KEY STRENGTHS - DESKTOP (Right Side)
    ============================================ */
-.hero-right {
+.hero-right-desktop {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, #0D47A1, #1DA8E8);
-    padding: 40px;
+    padding: 60px 40px;
     position: relative;
 }
 
-.hero-right::before {
+.hero-right-desktop::before {
     content: '';
     position: absolute;
     top: 0;
@@ -492,6 +480,30 @@ ul {
     pointer-events: none;
 }
 
+/* ============================================
+   KEY STRENGTHS - MOBILE (Below Hero Content)
+   ============================================ */
+.hero-right-mobile {
+    display: none;
+    background: linear-gradient(135deg, #0D47A1, #1DA8E8);
+    padding: 50px 30px;
+    position: relative;
+}
+
+.hero-right-mobile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ============================================
+   STRENGTHS CONTENT (Shared)
+   ============================================ */
 .hero-strengths {
     position: relative;
     z-index: 1;
@@ -723,7 +735,6 @@ ul {
     color: var(--primary-blue);
 }
 
-/* Footer Social */
 .footer-social {
     margin-top: 10px;
 }
@@ -759,7 +770,6 @@ ul {
     letter-spacing: 1px;
 }
 
-/* Clickable footer links */
 .footer-links li {
     margin-bottom: 12px;
 }
@@ -776,7 +786,6 @@ ul {
     transform: translateX(5px);
 }
 
-/* Non-clickable static footer links */
 .footer-links-static li {
     color: var(--text-medium);
     font-size: 0.9rem;
@@ -826,7 +835,6 @@ ul {
     }
 }
 
-/* Scroll Animation Classes */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -842,7 +850,7 @@ ul {
    RESPONSIVE DESIGN
    ============================================ */
 
-/* Tablet (768px - 1024px) */
+/* Tablet and Below - Show mobile strengths, hide desktop strengths */
 @media screen and (max-width: 1024px) {
     .container {
         padding: 0 20px;
@@ -864,19 +872,13 @@ ul {
         font-size: 0.85rem;
     }
     
-    /* Hero */
-    .hero-section {
-        min-height: auto;
-    }
-    
+    /* Hero - Stack layout */
     .hero-slide {
         flex-direction: column;
-        min-height: auto;
     }
     
     .hero-left {
         padding: 50px 30px;
-        order: 2;
     }
     
     .hero-content-wrapper {
@@ -891,9 +893,14 @@ ul {
         max-height: 250px;
     }
     
-    .hero-right {
-        order: 1;
-        padding: 40px 30px;
+    /* Hide desktop strengths */
+    .hero-right-desktop {
+        display: none;
+    }
+    
+    /* Show mobile strengths */
+    .hero-right-mobile {
+        display: block;
     }
     
     .hero-headline {
@@ -979,20 +986,9 @@ ul {
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     
-    /* Hero - Mobile Fix */
-    .hero-section {
-        min-height: auto;
-        display: block;
-    }
-    
-    .hero-slide {
-        flex-direction: column;
-        min-height: auto;
-    }
-    
+    /* Hero - Mobile */
     .hero-left {
         padding: 40px 20px;
-        order: 2;
     }
     
     .hero-content-wrapper {
@@ -1018,8 +1014,8 @@ ul {
         text-align: center;
     }
     
-    .hero-right {
-        order: 1;
+    /* Mobile strengths section */
+    .hero-right-mobile {
         padding: 40px 20px;
     }
     
@@ -1050,7 +1046,6 @@ ul {
         grid-template-columns: 1fr;
     }
     
-    /* Section headers */
     .section-header.with-action {
         flex-direction: column;
         gap: 20px;
@@ -1071,7 +1066,6 @@ ul {
         grid-column: auto;
     }
     
-    /* Copyright */
     .copyright-content {
         flex-direction: column;
         text-align: center;
@@ -1084,7 +1078,7 @@ ul {
         padding: 30px 16px;
     }
     
-    .hero-right {
+    .hero-right-mobile {
         padding: 30px 16px;
     }
     
@@ -1149,6 +1143,17 @@ ul {
     }
 }
 
+/* Desktop (1025px and above) - Show desktop strengths, hide mobile strengths */
+@media screen and (min-width: 1025px) {
+    .hero-right-desktop {
+        display: flex;
+    }
+    
+    .hero-right-mobile {
+        display: none;
+    }
+}
+
 /* ============================================
    ACCESSIBILITY
    ============================================ */
@@ -1163,7 +1168,6 @@ ul {
     }
 }
 
-/* Focus styles for keyboard navigation */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
@@ -1171,7 +1175,6 @@ input:focus-visible {
     outline-offset: 2px;
 }
 
-/* Screen reader only */
 .sr-only {
     position: absolute;
     width: 1px;
