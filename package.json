@@ -1,0 +1,27 @@
+{
+  "name": "organization-website",
+  "version": "1.0.0",
+  "description": "Modern responsive institutional website with sky blue theme",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000 --open=index.html",
+    "build": "echo 'No build step required for static site'",
+    "optimize-images": "node scripts/optimize-images.js",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "website",
+    "institutional",
+    "responsive",
+    "carousel",
+    "dark-mode"
+  ],
+  "author": "Your Organization",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "serve": "^14.2.1",
+    "gh-pages": "^6.1.1"
+  }
+}
