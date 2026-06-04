@@ -4,12 +4,43 @@
 document.addEventListener('DOMContentLoaded', () => {
     initializeScrollAnimations();
     initializeSmoothScrolling();
-    initializeLazyLoading();
     initializeMobileMenu();
     initializeHeroImages();
     initializeLogoImage();
     initializeContactScroll();
+    forceImagesVisible();
 });
+
+// ============================================
+// FORCE CRITICAL IMAGES VISIBLE
+// ============================================
+function forceImagesVisible() {
+    // Force logo images to be visible immediately
+    document.querySelectorAll('.logo-img').forEach(img => {
+        img.style.opacity = '1';
+        img.classList.add('loaded');
+    });
+    
+    // Force hero slogan image visible
+    document.querySelectorAll('.hero-slogan-image img').forEach(img => {
+        img.style.opacity = '1';
+        img.classList.add('loaded');
+    });
+    
+    // Force hero background image visible
+    document.querySelectorAll('.hero-image').forEach(img => {
+        img.style.opacity = '1';
+        img.classList.add('loaded');
+    });
+    
+    // Force all other images
+    document.querySelectorAll('img').forEach(img => {
+        if (img.complete && img.naturalWidth > 0) {
+            img.style.opacity = '1';
+            img.classList.add('loaded');
+        }
+    });
+}
 
 // ============================================
 // SCROLL ANIMATIONS
@@ -28,7 +59,6 @@ function initializeScrollAnimations() {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
                 
-                // Stagger children animations for achievements grid
                 if (entry.target.classList.contains('achievements-grid')) {
                     const cards = entry.target.children;
                     Array.from(cards).forEach((card, index) => {
@@ -44,13 +74,11 @@ function initializeScrollAnimations() {
         rootMargin: '0px 0px -50px 0px'
     });
     
-    // Observe achievements grid for staggered animations
     const achievementsGrid = document.querySelector('.achievements-grid');
     if (achievementsGrid) {
         observer.observe(achievementsGrid);
     }
     
-    // Observe individual elements
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
     });
@@ -68,7 +96,6 @@ function initializeSmoothScrolling() {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
-                // Calculate offset for sticky header
                 const headerHeight = document.getElementById('siteHeader')?.offsetHeight || 0;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
                 
@@ -77,7 +104,7 @@ function initializeSmoothScrolling() {
                     behavior: 'smooth'
                 });
                 
-                // Close mobile menu if open
+                // Close mobile menu
                 const menu = document.querySelector('.nav-menu');
                 const toggle = document.querySelector('.mobile-menu-toggle');
                 if (menu && menu.classList.contains('active')) {
@@ -94,53 +121,6 @@ function initializeSmoothScrolling() {
             }
         });
     });
-}
-
-// ============================================
-// LAZY LOADING IMAGES
-// ============================================
-function initializeLazyLoading() {
-    const images = document.querySelectorAll('img[loading="lazy"]');
-    
-    const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                
-                if (img.dataset.src) {
-                    img.src = img.dataset.src;
-                }
-                
-                img.addEventListener('load', () => {
-                    img.classList.add('loaded');
-                });
-                
-                if (img.complete) {
-                    img.classList.add('loaded');
-                }
-                
-                observer.unobserve(img);
-            }
-        });
-    }, {
-        rootMargin: '50px 0px',
-        threshold: 0.01
-    });
-    
-    images.forEach(img => {
-        imageObserver.observe(img);
-    });
-    
-    // Load visible images immediately
-    setTimeout(() => {
-        document.querySelectorAll('img:not([loading="lazy"])').forEach(img => {
-            if (img.complete) {
-                img.classList.add('loaded');
-            } else {
-                img.addEventListener('load', () => img.classList.add('loaded'));
-            }
-        });
-    }, 100);
 }
 
 // ============================================
@@ -169,7 +149,6 @@ function initializeMobileMenu() {
         });
     }
     
-    // Close menu when clicking outside
     document.addEventListener('click', (e) => {
         if (!e.target.closest('.main-nav') && menu.classList.contains('active')) {
             menu.classList.remove('active');
@@ -182,7 +161,6 @@ function initializeMobileMenu() {
         }
     });
     
-    // Close menu on window resize
     window.addEventListener('resize', () => {
         if (window.innerWidth > 768 && menu.classList.contains('active')) {
             menu.classList.remove('active');
@@ -203,8 +181,11 @@ function initializeHeroImages() {
     const sloganImages = document.querySelectorAll('.hero-slogan-image img');
     
     sloganImages.forEach((img, index) => {
+        img.style.opacity = '1';
+        
         img.addEventListener('load', () => {
             img.classList.add('loaded');
+            img.style.opacity = '1';
         });
         
         img.addEventListener('error', () => {
@@ -217,6 +198,7 @@ function initializeHeroImages() {
                 createFallbackImage(img, index);
             } else {
                 img.classList.add('loaded');
+                img.style.opacity = '1';
             }
         }
     });
@@ -224,12 +206,15 @@ function initializeHeroImages() {
     // Handle hero background images
     const heroImages = document.querySelectorAll('.hero-image');
     heroImages.forEach((heroImg, index) => {
+        heroImg.style.opacity = '1';
+        
         const bgImage = heroImg.style.backgroundImage;
         if (bgImage && bgImage !== 'none') {
             const url = bgImage.replace(/url\(['"]?(.*?)['"]?\)/i, '$1');
             const tempImg = new Image();
             tempImg.onload = () => {
                 heroImg.classList.add('loaded');
+                heroImg.style.opacity = '1';
             };
             tempImg.onerror = () => {
                 console.warn(`Hero background image ${index + 1} failed to load`);
@@ -248,8 +233,11 @@ function initializeLogoImage() {
     const logoImages = document.querySelectorAll('.logo-img');
     
     logoImages.forEach(img => {
+        img.style.opacity = '1';
+        
         img.addEventListener('load', () => {
             img.classList.add('loaded');
+            img.style.opacity = '1';
         });
         
         img.addEventListener('error', () => {
@@ -273,6 +261,7 @@ function initializeLogoImage() {
                 img.dispatchEvent(new Event('error'));
             } else {
                 img.classList.add('loaded');
+                img.style.opacity = '1';
             }
         }
     });
@@ -318,13 +307,13 @@ function createFallbackImage(img, index) {
     
     img.src = canvas.toDataURL('image/png');
     img.classList.add('loaded', 'fallback-image');
+    img.style.opacity = '1';
 }
 
 // ============================================
 // CONTACT BUTTON SCROLL
 // ============================================
 function initializeContactScroll() {
-    // Handles the header Contact button to scroll to footer
     const contactButtons = document.querySelectorAll('a[href="#contact"]');
     contactButtons.forEach(button => {
         button.addEventListener('click', function(e) {
@@ -359,7 +348,7 @@ function debounce(func, wait) {
 }
 
 const handleResize = debounce(() => {
-    // Any resize-dependent updates here
+    forceImagesVisible();
 }, 250);
 
 window.addEventListener('resize', handleResize);
@@ -369,5 +358,10 @@ window.addEventListener('resize', handleResize);
 // ============================================
 window.addEventListener('load', () => {
     document.body.classList.add('loaded');
+    forceImagesVisible();
     console.log('✅ Website fully loaded and initialized');
 });
+
+// Force images visible after a short delay (catch any missed images)
+setTimeout(forceImagesVisible, 500);
+setTimeout(forceImagesVisible, 1000);
