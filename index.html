@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Organization website - placeholder description">
+    <title>Organization Name</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark-mode.css">
+</head>
+<body>
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header" id="siteHeader">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-left">
+                    <a href="/" class="logo-link">
+                        <div class="logo-circle">
+                            <img src="assets/images/logo.png" alt="Logo" class="logo-img">
+                        </div>
+                        <span class="org-name">Organization Name</span>
+                    </a>
+                </div>
+                
+                <div class="top-bar-center">
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="top-bar-right">
+                    <a href="#" class="utility-link">Contact</a>
+                    <a href="#" class="utility-link">Careers</a>
+                    <a href="#" class="utility-link">Language</a>
+                    <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Menu Item 1</a>
+                        <div class="dropdown">
+                            <a href="#">Sub Item 1.1</a>
+                            <a href="#">Sub Item 1.2</a>
+                            <a href="#">Sub Item 1.3</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Menu Item 2</a>
+                        <div class="dropdown">
+                            <a href="#">Sub Item 2.1</a>
+                            <a href="#">Sub Item 2.2</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Menu Item 3</a>
+                        <div class="dropdown">
+                            <a href="#">Sub Item 3.1</a>
+                            <a href="#">Sub Item 3.2</a>
+                            <a href="#">Sub Item 3.3</a>
+                            <a href="#">Sub Item 3.4</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Menu Item 4</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Menu Item 5</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Menu Item 6</a>
+                        <div class="dropdown">
+                            <a href="#">Sub Item 6.1</a>
+                            <a href="#">Sub Item 6.2</a>
+                        </div>
+                    </li>
+                </ul>
+                
+                <!-- Mobile Hamburger -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="heroCarousel">
+        <!-- Slide 1 -->
+        <div class="hero-slide active">
+            <div class="hero-left">
+                <div class="hero-content">
+                    <h1 class="hero-headline">Building a Better Future Together</h1>
+                    <p class="hero-subtitle">Our commitment to progress</p>
+                    <p class="hero-description">Join us in creating meaningful change for communities everywhere through dedicated action and innovative solutions.</p>
+                    <a href="#" class="cta-button">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image" style="background-image: url('assets/images/hero-1.jpg');">
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="hero-slide">
+            <div class="hero-left">
+                <div class="hero-content">
+                    <h1 class="hero-headline">Driving Innovation Forward</h1>
+                    <p class="hero-subtitle">Transforming challenges into opportunities</p>
+                    <p class="hero-description">Our strategic initiatives are designed to address the most pressing issues of our time with creative and sustainable approaches.</p>
+                    <a href="#" class="cta-button">Get Involved <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image" style="background-image: url('assets/images/hero-2.jpg');">
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="hero-slide">
+            <div class="hero-left">
+                <div class="hero-content">
+                    <h1 class="hero-headline">Empowering Communities</h1>
+                    <p class="hero-subtitle">Together we make a difference</p>
+                    <p class="hero-description">Through collaboration and dedication, we build stronger, more resilient communities that can face any challenge.</p>
+                    <a href="#" class="cta-button">Discover More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image" style="background-image: url('assets/images/hero-3.jpg');">
+                    <div class="hero-overlay"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carousel Controls -->
+        <button class="carousel-prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="carousel-next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+        <div class="carousel-dots"></div>
+    </section>
+
+    <!-- ==================== FEATURED NEWS SECTION ==================== -->
+    <section class="featured-news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured News</h2>
+                <p class="section-subtitle">Stay updated with our latest announcements</p>
+            </div>
+            
+            <div class="news-carousel" id="newsCarousel">
+                <div class="carousel-track">
+                    <!-- News Card 1 -->
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="assets/images/news-1.jpg" alt="News 1" loading="lazy">
+                            <span class="news-date">15 Jan 2026</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Major Infrastructure Project Launched</h3>
+                            <p class="news-excerpt">A comprehensive new initiative to modernize public facilities and improve community services across the region.</p>
+                            <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- News Card 2 -->
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="assets/images/news-2.jpg" alt="News 2" loading="lazy">
+                            <span class="news-date">12 Jan 2026</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Educational Reform Program Announced</h3>
+                            <p class="news-excerpt">New policies designed to enhance educational opportunities and outcomes for students at all levels.</p>
+                            <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- News Card 3 -->
+                    <div class="news-card">
+                        <div class="news-image">
+                            <img src="assets/images/news-3.jpg" alt="News 3" loading="lazy">
+                            <span class="news-date">10 Jan 2026</span>
+                        </div>
+                        <div class="news-content">
+                            <h3 class="news-title">Environmental Protection Milestone</h3>
+                            <p class="news-excerpt">Achievement of key sustainability targets demonstrates commitment to environmental stewardship.</p>
+                            <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Additional cards will be added via JS -->
+                </div>
+                
+                <div class="carousel-dots"></div>
+            </div>
+            
+            <div class="section-footer">
+                <a href="#" class="btn-view-all">View All News <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== KEY ISSUES SECTION ==================== -->
+    <section class="key-issues">
+        <div class="container">
+            <div class="section-header with-nav">
+                <h2 class="section-title">Key Issues</h2>
+                <div class="carousel-nav">
+                    <button class="nav-arrow prev-issue" aria-label="Previous issues">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="nav-arrow next-issue" aria-label="Next issues">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="issues-carousel" id="issuesCarousel">
+                <div class="carousel-track">
+                    <!-- Issue Card 1 -->
+                    <div class="issue-card">
+                        <div class="issue-image">
+                            <img src="assets/images/issue-1.jpg" alt="Healthcare" loading="lazy">
+                        </div>
+                        <div class="issue-content">
+                            <h3 class="issue-title">Healthcare Access</h3>
+                            <div class="issue-divider"></div>
+                            <p class="issue-description">Ensuring quality healthcare services are accessible and affordable for all members of our community through comprehensive reform and investment.</p>
+                            <a href="#" class="issue-link" aria-label="Learn more about Healthcare Access">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Issue Card 2 -->
+                    <div class="issue-card">
+                        <div class="issue-image">
+                            <img src="assets/images/issue-2.jpg" alt="Economic Growth" loading="lazy">
+                        </div>
+                        <div class="issue-content">
+                            <h3 class="issue-title">Economic Growth</h3>
+                            <div class="issue-divider"></div>
+                            <p class="issue-description">Developing sustainable economic policies that promote job creation, innovation, and prosperity across all sectors of the economy.</p>
+                            <a href="#" class="issue-link" aria-label="Learn more about Economic Growth">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Issue Card 3 -->
+                    <div class="issue-card">
+                        <div class="issue-image">
+                            <img src="assets/images/issue-3.jpg" alt="Education" loading="lazy">
+                        </div>
+                        <div class="issue-content">
+                            <h3 class="issue-title">Education Reform</h3>
+                            <div class="issue-divider"></div>
+                            <p class="issue-description">Modernizing educational systems to prepare students for the challenges of tomorrow through technology integration and curriculum enhancement.</p>
+                            <a href="#" class="issue-link" aria-label="Learn more about Education Reform">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== ACHIEVEMENTS SECTION ==================== -->
+    <section class="achievements">
+        <div class="container">
+            <div class="section-header with-action">
+                <h2 class="section-title">Our Achievements</h2>
+                <a href="#" class="btn-view-all">View All <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="achievements-grid">
+                <!-- Achievement Card 1 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="achievement-title">50,000+</h3>
+                    <p class="achievement-description">Jobs created through economic development programs</p>
+                    <a href="#" class="achievement-link" aria-label="Learn more">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Achievement Card 2 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="achievement-title">200+</h3>
+                    <p class="achievement-description">Schools modernized with new technology infrastructure</p>
+                    <a href="#" class="achievement-link" aria-label="Learn more">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Achievement Card 3 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3 class="achievement-title">15</h3>
+                    <p class="achievement-description">New healthcare facilities established in underserved areas</p>
+                    <a href="#" class="achievement-link" aria-label="Learn more">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Achievement Card 4 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="achievement-title">40%</h3>
+                    <p class="achievement-description">Reduction in carbon emissions through green initiatives</p>
+                    <a href="#" class="achievement-link" aria-label="Learn more">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Achievement Card 5 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3 class="achievement-title">1,200 km</h3>
+                    <p class="achievement-description">New roads and transportation infrastructure built</p>
+                    <a href="#" class="achievement-link" aria-label="Learn more">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- Achievement Card 6 -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="achievement-title">3M+</h3>
+                    <p class="achievement-description">People benefited from social welfare programs</p>
+                    <a href="#" class="achievement-link" aria-label="Learn more">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== INSPIRATION SECTION ==================== -->
+    <section class="inspiration">
+        <div class="container">
+            <div class="section-header with-nav">
+                <h2 class="section-title">Inspiration & Leadership</h2>
+                <div class="carousel-nav">
+                    <button class="nav-arrow prev-inspire" aria-label="Previous profiles">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="nav-arrow next-inspire" aria-label="Next profiles">
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="inspiration-carousel" id="inspirationCarousel">
+                <div class="carousel-track">
+                    <!-- Profile Card 1 -->
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="assets/images/profile-1.jpg" alt="Jane Doe" loading="lazy">
+                        </div>
+                        <div class="profile-content">
+                            <h3 class="profile-name">Jane Doe</h3>
+                            <p class="profile-description">Leading advocate for educational reform with 20 years of experience in policy development and community engagement.</p>
+                            <a href="#" class="profile-link" aria-label="View profile">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Card 2 -->
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="assets/images/profile-2.jpg" alt="John Smith" loading="lazy">
+                        </div>
+                        <div class="profile-content">
+                            <h3 class="profile-name">John Smith</h3>
+                            <p class="profile-description">Pioneering environmental scientist and policy maker dedicated to sustainable development and conservation.</p>
+                            <a href="#" class="profile-link" aria-label="View profile">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Card 3 -->
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="assets/images/profile-3.jpg" alt="Maria Garcia" loading="lazy">
+                        </div>
+                        <div class="profile-content">
+                            <h3 class="profile-name">Maria Garcia</h3>
+                            <p class="profile-description">Healthcare visionary transforming medical access in rural communities through innovative telemedicine solutions.</p>
+                            <a href="#" class="profile-link" aria-label="View profile">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Organization Info -->
+                <div class="footer-column footer-info">
+                    <div class="footer-logo">
+                        <div class="logo-circle">
+                            <img src="assets/images/logo.png" alt="Logo">
+                        </div>
+                        <span class="org-name">Organization Name</span>
+                    </div>
+                    <address class="footer-address">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, State 12345</p>
+                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                        <p><i class="fas fa-envelope"></i> info@organization.org</p>
+                    </address>
+                </div>
+                
+                <!-- Column 2: About -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">About</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Mission & Vision</a></li>
+                        <li><a href="#">History</a></li>
+                        <li><a href="#">Awards</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Departments -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Departments</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Administration</a></li>
+                        <li><a href="#">Public Services</a></li>
+                        <li><a href="#">Infrastructure</a></li>
+                        <li><a href="#">Health & Safety</a></li>
+                        <li><a href="#">Finance</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 4: Resources -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Document Library</a></li>
+                        <li><a href="#">Forms & Applications</a></li>
+                        <li><a href="#">Reports</a></li>
+                        <li><a href="#">Statistics</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 5: Media -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Media</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Press Releases</a></li>
+                        <li><a href="#">News Room</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">Live Streams</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 6: Join Us -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Join Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Volunteer</a></li>
+                        <li><a href="#">Internships</a></li>
+                        <li><a href="#">Partnerships</a></li>
+                        <li><a href="#">Donate</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 7: Publications -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Publications</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Annual Reports</a></li>
+                        <li><a href="#">Newsletters</a></li>
+                        <li><a href="#">Research Papers</a></li>
+                        <li><a href="#">Policy Briefs</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== COPYRIGHT BAR ==================== -->
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="copyright-content">
+                <p class="copyright-text">&copy; 2026 Organization Name. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== FLOATING SIDE PANEL ==================== -->
+    <div class="floating-panel" id="floatingPanel">
+        <a href="#" class="panel-item" title="Contact">
+            <i class="fas fa-envelope"></i>
+            <span class="panel-label">Contact</span>
+        </a>
+        <a href="#" class="panel-item" title="Donate">
+            <i class="fas fa-hand-holding-heart"></i>
+            <span class="panel-label">Donate</span>
+        </a>
+        <a href="#" class="panel-item" title="Volunteer">
+            <i class="fas fa-users"></i>
+            <span class="panel-label">Volunteer</span>
+        </a>
+        <a href="#" class="panel-item" title="Resources">
+            <i class="fas fa-book"></i>
+            <span class="panel-label">Resources</span>
+        </a>
+    </div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/sticky-header.js"></script>
+</body>
+</html>
