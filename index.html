@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Organization website - placeholder description">
+    <meta name="description" content="Ayush Sharma - Political Experience & Leadership">
     <title>Ayush Sharma</title>
     
     <!-- Google Fonts -->
@@ -27,7 +27,7 @@
                 <div class="top-bar-left">
                     <a href="/" class="logo-link">
                         <div class="logo-circle">
-                            <img src="assets/images/logo.jpg" alt="Organization Logo" class="logo-img">
+                            <img src="assets/images/logo.jpg" alt="Ayush Sharma Logo" class="logo-img">
                         </div>
                         <span class="org-name">Ayush Sharma</span>
                     </a>
@@ -35,17 +35,39 @@
                 
                 <div class="top-bar-center">
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/100013801632265" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/ayushsharma.17" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/100013801632265" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ayushsharma.17" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
                 
                 <div class="top-bar-right">
-                    <a href="#" class="utility-link">Contact</a>
+                    <a href="mailto:ayushsharma.3747@gmail.com" class="utility-link">Contact</a>
                 </div>
             </div>
         </div>
         
+        <!-- Main Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#heroCarousel" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#newsCarousel" class="nav-link">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#achievements" class="nav-link">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                
                 <!-- Mobile Hamburger -->
                 <button class="mobile-menu-toggle" aria-label="Toggle menu">
                     <span></span>
@@ -64,12 +86,13 @@
                 <div class="hero-content">
                     <div class="hero-content-wrapper">
                         <div class="hero-text">
-                            <h1 class="hero-headline">🏛 7+ Years of Political Experience</h1>
+                            <h1 class="hero-headline">7+ Years of Political Experience</h1>
+                            <p class="hero-subtitle">Student Leader | Youth Activist | Campaign Strategist</p>
                             <p class="hero-description">Actively involved in organizational and electoral politics with over seven years of experience across student, youth, and public campaigns.</p>
-                            <a href="#" class="cta-button">Connect <i class="fas fa-arrow-right"></i></a>
+                            <a href="#contact" class="cta-button">Connect <i class="fas fa-arrow-right"></i></a>
                         </div>
                         <div class="hero-slogan-image">
-                            <img src="assets/images/hero-slogan.jpg" alt="Building a Better Future Together" loading="eager">
+                            <img src="assets/images/hero-slogan.jpg" alt="Ayush Sharma - Political Leader" loading="eager">
                         </div>
                     </div>
                 </div>
@@ -81,25 +104,35 @@
             </div>
         </div>
         
-            <!-- ==================== FEATURED NEWS SECTION ==================== -->
-    <section class="featured-news">
+        <!-- Carousel Controls -->
+        <button class="carousel-prev" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-next" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="carousel-dots"></div>
+    </section>
+
+    <!-- ==================== FEATURED NEWS SECTION ==================== -->
+    <section class="featured-news" id="newsCarousel">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Featured News</h2>
-                <p class="section-subtitle">Stay updated with our latest announcements</p>
+                <h2 class="section-title">Latest Updates</h2>
+                <p class="section-subtitle">Stay updated with recent activities and announcements</p>
             </div>
             
-            <div class="news-carousel" id="newsCarousel">
+            <div class="news-carousel">
                 <div class="carousel-track">
                     <!-- News Card 1 -->
                     <div class="news-card">
                         <div class="news-image">
-                            <img src="assets/images/news-1.jpg" alt="News 1" loading="lazy">
-                            <span class="news-date">15 Jan 2026</span>
+                            <img src="assets/images/news-1.jpg" alt="DUSU Elections 2025" loading="lazy">
+                            <span class="news-date">Oct 2025</span>
                         </div>
                         <div class="news-content">
-                            <h3 class="news-title">Major Infrastructure Project Launched</h3>
-                            <p class="news-excerpt">A comprehensive new initiative to modernize public facilities and improve community services across the region.</p>
+                            <h3 class="news-title">DUSU Elections 2025 Campaign</h3>
+                            <p class="news-excerpt">Actively participated in Delhi University Students' Union elections campaign, contributing to strategy and student outreach.</p>
                             <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -107,12 +140,12 @@
                     <!-- News Card 2 -->
                     <div class="news-card">
                         <div class="news-image">
-                            <img src="assets/images/news-2.jpg" alt="News 2" loading="lazy">
-                            <span class="news-date">12 Jan 2026</span>
+                            <img src="assets/images/news-2.jpg" alt="Youth Congress" loading="lazy">
+                            <span class="news-date">2026</span>
                         </div>
                         <div class="news-content">
-                            <h3 class="news-title">Educational Reform Program Announced</h3>
-                            <p class="news-excerpt">New policies designed to enhance educational opportunities and outcomes for students at all levels.</p>
+                            <h3 class="news-title">IYC National Office Bearer Selection</h3>
+                            <p class="news-excerpt">Selected twice for the interview process for the position of National Office Bearer in the Indian Youth Congress.</p>
                             <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -120,12 +153,12 @@
                     <!-- News Card 3 -->
                     <div class="news-card">
                         <div class="news-image">
-                            <img src="assets/images/news-3.jpg" alt="News 3" loading="lazy">
-                            <span class="news-date">10 Jan 2026</span>
+                            <img src="assets/images/news-3.jpg" alt="District Congress" loading="lazy">
+                            <span class="news-date">2024-2026</span>
                         </div>
                         <div class="news-content">
-                            <h3 class="news-title">Environmental Protection Milestone</h3>
-                            <p class="news-excerpt">Achievement of key sustainability targets demonstrates commitment to environmental stewardship.</p>
+                            <h3 class="news-title">District Congress Committee Work</h3>
+                            <p class="news-excerpt">Currently working with the District Congress Committee on organizational strengthening and public outreach.</p>
                             <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
@@ -135,14 +168,13 @@
             </div>
             
             <div class="section-footer">
-                <a href="#" class="btn-view-all">View All News <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="btn-view-all">View All Updates <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
-
     <!-- ==================== ACHIEVEMENTS SECTION ==================== -->
-    <section class="achievements">
+    <section class="achievements" id="achievements">
         <div class="container">
             <div class="section-header with-action">
                 <h2 class="section-title">My Achievements</h2>
@@ -152,7 +184,7 @@
                 <!-- Achievement Card 1 -->
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-school"></i>
                     </div>
                     <h3 class="achievement-title">NSUI School Wing Leader</h3>
                     <p class="achievement-description">Served in the NSUI School Wing for 3 years, contributing to student outreach and organizational activities.</p>
@@ -161,43 +193,43 @@
                 <!-- Achievement Card 2 -->
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-university"></i>
                     </div>
-                    <h3 class="achievement-title">NSUI University & College Wing Member</h3>
+                    <h3 class="achievement-title">NSUI University & College Wing</h3>
                     <p class="achievement-description">Worked with the NSUI University and College Wing for 3 years, strengthening student representation and youth engagement.</p>
                 </div>
                 
                 <!-- Achievement Card 3 -->
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
+                        <i class="fas fa-vote-yea"></i>
                     </div>
-                    <h3 class="achievement-title">Delhi University Students' Union Elections (DUSU)</h3>
-                    <p class="achievement-description">Participated & Contributed in DUSU 2024 campaign & again in DUSU 2025, gaining valuable experience in election strategy and grassroots mobilization.</p>
+                    <h3 class="achievement-title">Delhi University Students' Union (DUSU)</h3>
+                    <p class="achievement-description">Participated & contributed in DUSU 2024 and DUSU 2025 campaigns, gaining valuable experience in election strategy and grassroots mobilization.</p>
                 </div>
                 
                 <!-- Achievement Card 4 -->
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-landmark"></i>
                     </div>
-                    <h3 class="achievement-title">Chhattisgarh Legislative Assembly Election 2023</h3>
+                    <h3 class="achievement-title">Chhattisgarh Assembly Election 2023</h3>
                     <p class="achievement-description">Worked as part of the Management Team for the Vaishali Nagar Assembly Constituency (No. 66) during the 2023 Chhattisgarh Assembly Elections.</p>
                 </div>
                 
                 <!-- Achievement Card 5 -->
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-flag"></i>
                     </div>
                     <h3 class="achievement-title">Lok Sabha General Election 2024</h3>
-                    <p class="achievement-description">Played an active role in the Rajnandgaon Parliamentary Constituency (CG-06) campaign and Contributed to campaign activities and coordination in the Kawardha region.</p>
+                    <p class="achievement-description">Played an active role in the Rajnandgaon Parliamentary Constituency (CG-06) campaign and contributed to campaign activities in the Kawardha region.</p>
                 </div>
                 
                 <!-- Achievement Card 6 -->
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-city"></i>
                     </div>
                     <h3 class="achievement-title">Durg Municipal Elections</h3>
                     <p class="achievement-description">Served as Ground Team and Management Team In-Charge, overseeing campaign operations and volunteer coordination.</p>
@@ -206,7 +238,7 @@
                 <!-- Achievement Card 7 -->
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-users"></i>
                     </div>
                     <h3 class="achievement-title">District Congress Committee</h3>
                     <p class="achievement-description">Currently working with the District Congress Committee, contributing to organizational strengthening and public outreach initiatives.</p>
@@ -215,41 +247,76 @@
                 <!-- Achievement Card 8 -->
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-star"></i>
                     </div>
-                    <h3 class="achievement-title">Indian Youth Congress – National Office Bearer (NOB) Selection</h3>
+                    <h3 class="achievement-title">Indian Youth Congress – NOB Selection</h3>
                     <p class="achievement-description">Selected twice for the interview process for the position of National Office Bearer (NOB) in the Indian Youth Congress (2026).</p>
                 </div>
 
                 <!-- Achievement Card 9 -->
                 <div class="achievement-card">
                     <div class="achievement-icon">
-                        <i class="fas fa-chart-line"></i>
+                        <i class="fas fa-handshake"></i>
                     </div>
                     <h3 class="achievement-title">District Youth Congress</h3>
-                    <p class="achievement-description">Actively associated with the District Youth Congress for the last two years. Coordinated closely with district leadership in conducting organizational programs and public engagement activities.</p>
+                    <p class="achievement-description">Actively associated with the District Youth Congress for the last two years. Coordinated closely with district leadership in conducting organizational programs.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- ==================== FOOTER ==================== -->
-    <footer class="site-footer">
+    <footer class="site-footer" id="contact">
         <div class="container">
             <div class="footer-grid">
-                <!-- Column 1: Organization Info -->
+                <!-- Column 1: Contact Info -->
                 <div class="footer-column footer-info">
                     <div class="footer-logo">
                         <div class="logo-circle">
-                            <img src="assets/images/logo.jpg" alt="Organization Logo">
+                            <img src="assets/images/logo.jpg" alt="Ayush Sharma Logo">
                         </div>
                         <span class="org-name">Ayush Sharma</span>
                     </div>
                     <address class="footer-address">
                         <p><i class="fas fa-map-marker-alt"></i> Durg, Chhattisgarh 491001</p>
-                        <p><i class="fas fa-phone"></i> +91 70009-13747 </p>
-                        <p><i class="fas fa-envelope"></i> ayushsharma.3747@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> <a href="tel:+917000913747">+91 70009-13747</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:ayushsharma.3747@gmail.com">ayushsharma.3747@gmail.com</a></p>
                     </address>
+                    
+                    <!-- Social Links in Footer -->
+                    <div class="footer-social">
+                        <h4 class="footer-heading">Connect</h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/100013801632265" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ayushsharma.17" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Quick Links -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#heroCarousel">Home</a></li>
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#newsCarousel">Updates</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Political Work -->
+                <div class="footer-column">
+                    <h4 class="footer-heading">Political Work</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">NSUI Activities</a></li>
+                        <li><a href="#">Election Campaigns</a></li>
+                        <li><a href="#">Youth Congress</a></li>
+                        <li><a href="#">District Congress</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -259,7 +326,8 @@
     <div class="copyright-bar">
         <div class="container">
             <div class="copyright-content">
-                <p class="copyright-text">&copy; 2026 Organization Name. All rights reserved. Website by Palash Suryavanshi (CA Finalist)</p>
+                <p class="copyright-text">&copy; 2026 Ayush Sharma. All rights reserved.</p>
+                <p class="copyright-credit">Website by Palash Suryavanshi (CA Finalist)</p>
             </div>
         </div>
     </div>
