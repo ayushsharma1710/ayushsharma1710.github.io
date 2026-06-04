@@ -31,38 +31,17 @@
 <body>
     <!-- ==================== HEADER ==================== -->
     <header class="site-header" id="siteHeader">
-        <!-- Top Bar -->
-        <div class="top-bar">
-            <div class="container">
-                <div class="top-bar-left">
-                    <a href="/" class="logo-link">
-                        <div class="logo-circle">
-                            <img src="assets/images/logo.png" alt="Ayush Sharma Logo" class="logo-img">
-                        </div>
-                        <span class="org-name">Ayush Sharma</span>
-                    </a>
+        <div class="header-container">
+            <!-- Left: Profile Image + Name -->
+            <a href="/" class="header-brand">
+                <div class="header-profile-img">
+                    <img src="assets/images/profile.png" alt="Ayush Sharma" class="profile-img">
                 </div>
-                
-                <div class="top-bar-center">
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/100013801632265" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="https://www.instagram.com/ayushsharma.17" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="top-bar-right">
-                    <a href="#contact" class="utility-link">Contact</a>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Main Navigation -->
-        <nav class="main-nav">
-            <div class="container">
+                <span class="header-name">Ayush Sharma</span>
+            </a>
+            
+            <!-- Center: Navigation -->
+            <nav class="header-nav">
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="#home" class="nav-link">Home</a>
@@ -74,15 +53,45 @@
                         <a href="#contact" class="nav-link">Contact</a>
                     </li>
                 </ul>
-                
-                <!-- Mobile Hamburger -->
-                <button class="mobile-menu-toggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            </nav>
+            
+            <!-- Right: Social Icons + Contact -->
+            <div class="header-actions">
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/100013801632265" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ayushsharma.17" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <a href="#contact" class="header-contact-btn">Contact</a>
             </div>
-        </nav>
+            
+            <!-- Mobile Hamburger -->
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu (Hidden by default) -->
+        <div class="mobile-menu">
+            <ul class="mobile-nav-list">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#achievements" class="mobile-nav-link">Achievements</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-social">
+                <a href="https://www.facebook.com/100013801632265" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ayushsharma.17" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- ==================== HERO SECTION ==================== -->
@@ -288,8 +297,8 @@
                 <!-- Column 1: Contact Info -->
                 <div class="footer-column footer-info">
                     <div class="footer-logo">
-                        <div class="logo-circle">
-                            <img src="assets/images/logo.png" alt="Ayush Sharma Logo">
+                        <div class="footer-profile-img">
+                            <img src="assets/images/profile.png" alt="Ayush Sharma">
                         </div>
                         <span class="org-name">Ayush Sharma</span>
                     </div>
