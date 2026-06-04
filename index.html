@@ -45,7 +45,7 @@
                 </div>
                 
                 <div class="top-bar-right">
-                    <a href="mailto:ayushsharma.3747@gmail.com" class="utility-link">Contact</a>
+                    <a href="#contact" class="utility-link">Contact</a>
                 </div>
             </div>
         </div>
@@ -55,10 +55,7 @@
             <div class="container">
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="#heroCarousel" class="nav-link">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#newsCarousel" class="nav-link">News</a>
+                        <a href="#home" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#achievements" class="nav-link">Achievements</a>
@@ -78,9 +75,8 @@
         </nav>
     </header>
 
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero-section" id="heroCarousel">
-        <!-- Slide 1 -->
+    <!-- ==================== HERO SECTION (STATIC) ==================== -->
+    <section class="hero-section" id="home">
         <div class="hero-slide active">
             <div class="hero-left">
                 <div class="hero-content">
@@ -101,74 +97,6 @@
                 <div class="hero-image" style="background-image: url('assets/images/hero-1.jpg');">
                     <div class="hero-overlay"></div>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Carousel Controls -->
-        <button class="carousel-prev" aria-label="Previous slide">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="carousel-next" aria-label="Next slide">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        <div class="carousel-dots"></div>
-    </section>
-
-    <!-- ==================== FEATURED NEWS SECTION ==================== -->
-    <section class="featured-news" id="newsCarousel">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Latest Updates</h2>
-                <p class="section-subtitle">Stay updated with recent activities and announcements</p>
-            </div>
-            
-            <div class="news-carousel">
-                <div class="carousel-track">
-                    <!-- News Card 1 -->
-                    <div class="news-card">
-                        <div class="news-image">
-                            <img src="assets/images/news-1.jpg" alt="DUSU Elections 2025" loading="lazy">
-                            <span class="news-date">Oct 2025</span>
-                        </div>
-                        <div class="news-content">
-                            <h3 class="news-title">DUSU Elections 2025 Campaign</h3>
-                            <p class="news-excerpt">Actively participated in Delhi University Students' Union elections campaign, contributing to strategy and student outreach.</p>
-                            <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- News Card 2 -->
-                    <div class="news-card">
-                        <div class="news-image">
-                            <img src="assets/images/news-2.jpg" alt="Youth Congress" loading="lazy">
-                            <span class="news-date">2026</span>
-                        </div>
-                        <div class="news-content">
-                            <h3 class="news-title">IYC National Office Bearer Selection</h3>
-                            <p class="news-excerpt">Selected twice for the interview process for the position of National Office Bearer in the Indian Youth Congress.</p>
-                            <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                    
-                    <!-- News Card 3 -->
-                    <div class="news-card">
-                        <div class="news-image">
-                            <img src="assets/images/news-3.jpg" alt="District Congress" loading="lazy">
-                            <span class="news-date">2024-2026</span>
-                        </div>
-                        <div class="news-content">
-                            <h3 class="news-title">District Congress Committee Work</h3>
-                            <p class="news-excerpt">Currently working with the District Congress Committee on organizational strengthening and public outreach.</p>
-                            <a href="#" class="news-link">Read More <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="carousel-dots"></div>
-            </div>
-            
-            <div class="section-footer">
-                <a href="#" class="btn-view-all">View All Updates <i class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -301,21 +229,19 @@
                 <div class="footer-column">
                     <h4 class="footer-heading">Quick Links</h4>
                     <ul class="footer-links">
-                        <li><a href="#heroCarousel">Home</a></li>
+                        <li><a href="#home">Home</a></li>
                         <li><a href="#achievements">Achievements</a></li>
-                        <li><a href="#newsCarousel">Updates</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
-                <!-- Column 3: Political Work -->
+                <!-- Column 3: Political Work (Non-clickable) -->
                 <div class="footer-column">
                     <h4 class="footer-heading">Political Work</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">NSUI Activities</a></li>
-                        <li><a href="#">Election Campaigns</a></li>
-                        <li><a href="#">Youth Congress</a></li>
-                        <li><a href="#">District Congress</a></li>
+                    <ul class="footer-links footer-links-static">
+                        <li>NSUI Activities</li>
+                        <li>Election Campaigns</li>
+                        <li>Youth Congress</li>
+                        <li>District Congress</li>
                     </ul>
                 </div>
             </div>
@@ -333,7 +259,6 @@
     </div>
 
     <!-- ==================== SCRIPTS ==================== -->
-    <script src="js/carousel.js"></script>
     <script src="js/sticky-header.js"></script>
     <script src="js/main.js"></script>
 </body>
