@@ -265,6 +265,22 @@ ul {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
+/* Language Toggle Button */
+.lang-toggle {
+    padding: 6px 14px;
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.lang-toggle:hover {
+    background: rgba(255,255,255,0.3);
+}
+
 /* Mobile Toggle */
 .mobile-menu-toggle {
     display: none;
