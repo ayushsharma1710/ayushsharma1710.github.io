@@ -4,7 +4,7 @@ A modern, responsive personal portfolio website for Ayush Sharma, showcasing pol
 
 ## 🌐 Live Demo
 
-[Visit Website](https://ayushsharma.github.io)
+[Visit Website](https://ayushsharma1710.github.io)
 
 ## 🛠 Tech Stack
 
@@ -13,20 +13,6 @@ A modern, responsive personal portfolio website for Ayush Sharma, showcasing pol
 - Vanilla JavaScript
 - Font Awesome Icons
 - Google Fonts (Oswald, Inter)
-
-## 📁 Project Structure
-├──index.html # Hindi version (default)
-├── index-en.html # English version
-├── css/
-│ ├── style.css # Main stylesheet
-│ └── dark-mode.css # Dark mode overrides
-├── js/
-│ ├── main.js # Core functionality
-│ ├── gallery-carousel.js # Gallery carousel
-│ └── sticky-header.js # Header scroll behavior
-├── assets/
-│ └── images/ # All images and favicons
-└── README.md
 
 ## 👨‍💻 Developer
 
