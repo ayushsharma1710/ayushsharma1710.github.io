@@ -2,7 +2,7 @@
 
 A modern, responsive personal portfolio website for Ayush Sharma, showcasing political experience, achievements, and campaign gallery.
 
-## 🌐 Live Demo
+## 🌐 Live Website
 
 [Visit Website](https://ayushsharma1710.github.io)
 
