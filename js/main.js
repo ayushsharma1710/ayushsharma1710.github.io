@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSmoothScrolling();
     initializeMobileMenu();
     initializeHeroImages();
-    initializeLogoImage();
+    initializeProfileImages();
     initializeContactScroll();
     forceImagesVisible();
 });
@@ -25,6 +25,11 @@ function forceImagesVisible() {
         img.classList.add('loaded');
     });
     
+    document.querySelectorAll('.gallery-slide img').forEach(img => {
+        img.style.opacity = '1';
+        img.classList.add('loaded');
+    });
+    
     document.querySelectorAll('img').forEach(img => {
         if (img.complete && img.naturalWidth > 0) {
             img.style.opacity = '1';
@@ -38,7 +43,7 @@ function forceImagesVisible() {
 // ============================================
 function initializeScrollAnimations() {
     const animatedElements = document.querySelectorAll(
-        '.achievement-card, .section-title, .hero-slogan-image'
+        '.achievement-card, .section-title, .hero-slogan-image, .gallery-slide'
     );
     
     animatedElements.forEach(el => {
@@ -177,7 +182,7 @@ function initializeHeroImages() {
         });
         
         img.addEventListener('error', () => {
-            createFallbackImage(img, index);
+            createFallbackImage(img, 'Hero Slogan');
         });
         
         if (img.complete && img.naturalWidth > 0) {
@@ -188,9 +193,9 @@ function initializeHeroImages() {
 }
 
 // ============================================
-// LOGO/PROFILE IMAGES
+// PROFILE IMAGES
 // ============================================
-function initializeLogoImage() {
+function initializeProfileImages() {
     document.querySelectorAll('.profile-img, .footer-profile-img img').forEach(img => {
         img.style.opacity = '1';
         
@@ -201,6 +206,14 @@ function initializeLogoImage() {
         
         img.addEventListener('error', () => {
             console.warn('Profile image failed to load');
+            const container = img.closest('.header-profile-img, .footer-profile-img');
+            if (container) {
+                container.style.background = '#1DA8E8';
+                container.innerHTML = '<span style="color:#fff;font-weight:700;font-size:18px;">AS</span>';
+                container.style.display = 'flex';
+                container.style.alignItems = 'center';
+                container.style.justifyContent = 'center';
+            }
         });
         
         if (img.complete && img.naturalWidth > 0) {
@@ -213,7 +226,7 @@ function initializeLogoImage() {
 // ============================================
 // FALLBACK IMAGE GENERATOR
 // ============================================
-function createFallbackImage(img, index) {
+function createFallbackImage(img, text) {
     const canvas = document.createElement('canvas');
     const size = 400;
     canvas.width = size;
@@ -227,9 +240,9 @@ function createFallbackImage(img, index) {
     ctx.fillRect(0, 0, size, size);
     
     ctx.fillStyle = '#FFFFFF';
-    ctx.font = 'bold 28px Inter, Arial, sans-serif';
+    ctx.font = 'bold 24px Inter, Arial, sans-serif';
     ctx.textAlign = 'center';
-    ctx.fillText('Ayush Sharma', size/2, size/2);
+    ctx.fillText(text, size/2, size/2);
     
     img.src = canvas.toDataURL('image/png');
     img.classList.add('loaded');
