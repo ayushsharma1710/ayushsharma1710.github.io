@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleScroll() {
         const currentScrollY = window.scrollY;
         
-        // Don't hide header if at top or if mobile menu is open
+        // Don't hide header if at top or mobile menu is open
         if (currentScrollY <= headerHeight || 
-            document.querySelector('.nav-menu.active')) {
+            document.querySelector('.mobile-menu.active')) {
             header.classList.remove('hidden');
             lastScrollY = currentScrollY;
             return;
