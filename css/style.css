@@ -1278,6 +1278,10 @@ ul {
     .footer-info {
         grid-column: auto;
     }
+
+    .footer-share {
+       margin-top: 30px !important;
+    }
     
     .copyright-content {
         flex-direction: column;
