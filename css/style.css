@@ -923,29 +923,6 @@ ul {
     color: var(--white);
 }
 
-/* Share Button - Matches Hero CTA */
-.social-icons .share-btn,
-.footer-social .social-icons .share-btn {
-    width: auto !important;
-    height: auto !important;
-    min-width: unset !important;
-    border-radius: 30px !important;
-    padding: 14px 32px !important;
-    font-size: 0.95rem !important;
-    background: var(--primary-blue) !important;
-    color: var(--white) !important;
-    text-transform: uppercase !important;
-    letter-spacing: 1px !important;
-    font-weight: 600 !important;
-}
-
-.share-btn:hover {
-    background: var(--white);
-    color: var(--primary-blue);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(29,168,232,0.5);
-}
-
 .footer-heading {
     font-family: var(--heading-font);
     font-size: 1.1rem;
