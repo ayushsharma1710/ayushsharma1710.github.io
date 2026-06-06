@@ -930,7 +930,7 @@ ul {
     justify-content: center;
     gap: 10px;
     padding: 12px 28px;
-    min-width: 250px;
+    min-width: 300px;
     border-radius: 30px !important;
     background: var(--primary-blue);
     color: var(--white);
