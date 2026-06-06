@@ -922,6 +922,10 @@ ul {
     background: #25D366;
     color: var(--white);
 }
+/* Footer Share Button */
+.footer-share {
+    margin-top: 20px;
+}
 
 .footer-heading {
     font-family: var(--heading-font);
