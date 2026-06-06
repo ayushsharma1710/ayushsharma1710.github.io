@@ -923,22 +923,20 @@ ul {
     color: var(--white);
 }
 
-/* Share Button */
-.share-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: var(--primary-blue);
-    color: var(--white);
-    padding: 16px 36px;
-    border-radius: var(--button-radius);
-    font-weight: 600;
-    font-size: 1.05rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    box-shadow: 0 4px 20px rgba(29,168,232,0.4);
-    transition: all var(--transition-smooth);
-    text-decoration: none;
+/* Share Button - Matches Hero CTA */
+.social-icons .share-btn,
+.footer-social .social-icons .share-btn {
+    width: auto !important;
+    height: auto !important;
+    min-width: unset !important;
+    border-radius: 30px !important;
+    padding: 14px 32px !important;
+    font-size: 0.95rem !important;
+    background: var(--primary-blue) !important;
+    color: var(--white) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
 }
 
 .share-btn:hover {
