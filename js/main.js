@@ -299,7 +299,7 @@ setTimeout(forceImagesVisible, 1000);
 
 // Share Website
 function shareWebsite() {
-    const url = window.location.href;
+    const url = "https://ayushsharma1710.github.io";
     const title = document.title;
     
     if (navigator.share) {
@@ -309,7 +309,7 @@ function shareWebsite() {
         });
     } else {
         navigator.clipboard.writeText(url).then(() => {
-            alert('Website link copied to clipboard!');
+            alert('Link copied to clipboard!');
         });
     }
 }
