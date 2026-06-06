@@ -918,6 +918,11 @@ ul {
     color: var(--white);
 }
 
+.footer-social .social-icons a[aria-label="WhatsApp"]:hover {
+    background: #25D366;
+    color: var(--white);
+}
+
 .footer-heading {
     font-family: var(--heading-font);
     font-size: 1.1rem;
