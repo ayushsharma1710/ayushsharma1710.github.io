@@ -296,3 +296,20 @@ window.addEventListener('load', () => {
 
 setTimeout(forceImagesVisible, 500);
 setTimeout(forceImagesVisible, 1000);
+
+// Share Website
+function shareWebsite() {
+    const url = window.location.href;
+    const title = document.title;
+    
+    if (navigator.share) {
+        navigator.share({
+            title: title,
+            url: url
+        });
+    } else {
+        navigator.clipboard.writeText(url).then(() => {
+            alert('Website link copied to clipboard!');
+        });
+    }
+}
