@@ -929,13 +929,13 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 14px 32px;
+    padding: 12px 28px;
     min-width: 200px;
-    border-radius: var(--button-radius);
+    border-radius: 30px !important;
     background: var(--primary-blue);
     color: var(--white);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     border: 2px solid var(--primary-blue);
@@ -943,6 +943,8 @@ ul {
     cursor: pointer;
     transition: all var(--transition-smooth);
     text-decoration: none;
+    width: auto !important;
+    height: auto !important;
 }
 
 .share-btn:hover {
