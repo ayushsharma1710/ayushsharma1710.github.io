@@ -927,24 +927,19 @@ ul {
 .share-btn {
     display: inline-flex;
     align-items: center;
-    justify-content: center;
     gap: 10px;
-    padding: 12px 28px;
-    min-width: 300px;
-    border-radius: 30px !important;
     background: var(--primary-blue);
     color: var(--white);
+    padding: 16px 36px;
+    border-radius: var(--button-radius);
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    border: 2px solid var(--primary-blue);
     box-shadow: 0 4px 20px rgba(29,168,232,0.4);
-    cursor: pointer;
     transition: all var(--transition-smooth);
+    border: 2px solid var(--primary-blue);
     text-decoration: none;
-    width: auto !important;
-    height: auto !important;
 }
 
 .share-btn:hover {
