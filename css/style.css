@@ -929,6 +929,7 @@ ul {
     align-items: center;
     gap: 8px;
     padding: 10px 20px;
+    min-width: 200px;
     border-radius: var(--button-radius);
     background: var(--primary-blue-light);
     color: var(--primary-blue);
