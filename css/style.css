@@ -927,25 +927,29 @@ ul {
 .share-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    min-width: 100px;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 32px;
+    min-width: 200px;
     border-radius: var(--button-radius);
-    background: var(--primary-blue-light);
-    color: var(--primary-blue);
+    background: var(--primary-blue);
+    color: var(--white);
     font-weight: 600;
-    font-size: 0.85rem;
-    border: none;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid var(--primary-blue);
+    box-shadow: 0 4px 20px rgba(29,168,232,0.4);
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all var(--transition-smooth);
     text-decoration: none;
 }
 
 .share-btn:hover {
-    background: #FF6B35;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 107, 53, 0.4);
+    background: var(--white);
+    color: var(--primary-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(29,168,232,0.5);
 }
 
 .footer-heading {
